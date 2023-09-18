@@ -106,17 +106,17 @@ it will install the required gemfile for running the project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- **Validations and Model specs.**
- **Processing data in models.**
- **Controllers.**
- **Controllers specs.**
- **Views.**
- **Forms.**
- **Integration specs for Views and fixing n+1 problems.**
- **Add Devise.**
- **Add authorization rules.**
- **Add API endpoints.**
- **API documentation.**
+ - Validations and Model specs.
+ - Processing data in models.
+ - Controllers.
+ - Controllers specs.
+ - Views.
+ - Forms.
+ - Integration specs for Views and fixing n+1 problems.
+ - Add Devise.
+ - Add authorization rules.
+ - Add API endpoints.
+ - API documentation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
