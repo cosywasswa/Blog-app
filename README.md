@@ -17,7 +17,6 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [🚀 Presentation Video](#Video)
     - [Install](#install)
     - [Usage](#usage)
   - [👥 Author ](#-author-)
