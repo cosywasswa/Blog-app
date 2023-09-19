@@ -4,9 +4,9 @@ RSpec.describe Post, type: :Model do
   let(:user) { User.new(name: 'Cosmas', photo: 'www.newpics.com/jpg', bio: 'First son', posts_counter: 4) }
   before { user.save }
 
-  let(:post) {
+  let(:post) do
     Post.new(title: 'greeting', text: 'Nice photos sofar', comments_counter: 2, likes_counter: 10, author_id: user.id)
-  }
+  end
   before { post.save }
 
   it 'title should be present' do
