@@ -1,15 +1,148 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*,
+html {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.users-article {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+}
+
+.photo {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.see-posts {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(212, 142, 51);
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.details {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.details p {
+    padding-top: 30%;
+}
+
+.bio {
+   width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.bio p {
+    padding-bottom: 10px;
+}
+
+.post-details {
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;  
+}
+
+.post-details p {
+    position: relative;
+    top: 90%;
+    left: 87%;
+}
+
+.post-details h2 {
+    padding-bottom: 10px;
+}
+
+.posts-details {
+    border: 1px solid black;
+    padding: 10px;   
+}
+
+.comment-cont {
+    border: 1px solid black;
+    padding: 10px; 
+}
+
+.posts-details p {
+    position: relative;
+    top: 90%;
+    left: 87%;
+}
+
+.post-comment {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.post-comments {
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.left {
+    display: flex;
+}
+
+.post-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-body {
+    padding-top: 20px;
+}
+
+.comments-container {
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px; 
+}
+
+.post-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+    padding: 10px;
+}
+
+.pagination {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(212, 142, 51);
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+}
