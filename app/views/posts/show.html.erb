@@ -1,2 +1,23 @@
-<h1>Details for a selected Post</h1>
+<section class="post-container">
+<article class="post-comments">
+<div class="post-head">
+  <div class="left">
+    <h4>Post  #<%= @post.id %><h4>
+    <p>by <%= @user.name %></p>
+ </div>
+ <div>
+<span>Comments: <%= @post.comments_counter %> Likes:<%= @post.likes_counter %></span>
+</div>
+</div>
+<div class="post-body">
+<h4><%= @post.text %></h4>
+</div>
 
+</article>
+<div class="comments-container">
+<% @post.comments.each do |comment| %>
+    <p><%= comment.user.name %>: <%= comment.text %> <%= comment.id %></P>
+    <% end %>
+</div>
+
+</section>
