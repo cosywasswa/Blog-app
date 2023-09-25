@@ -52,6 +52,7 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 - **Validations and Model specs**
 - **Setup controllers**
 - **Controllers specs**
+- **Users and posts views**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +111,6 @@ it will install the required gemfile for running the project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- - Views.
  - Forms.
  - Integration specs for Views and fixing n+1 problems.
  - Add Devise.
