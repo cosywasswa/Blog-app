@@ -10,9 +10,9 @@
   <p>Bio</p>
   <p><%= @user.bio %></p>
 </div>
-    <% @posts.each do |post| %>
+    <% @user.recent_posts.each do |post| %>
         <div class="post-details">
-      <h2>Post #<%= post.id %></h2>
+      <h2><%= link_to "Post #", user_post_url(@user.id, post.id) %><%= post.id %></h2>
       <h3><%= post.text %></h3>
       <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
       </div>
