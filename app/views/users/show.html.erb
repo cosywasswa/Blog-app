@@ -1,2 +1,23 @@
-<h1>Details of a Selected User</h1>
-
+<section class="container">
+<article class="users-article">
+<div class="photo"><%= @user.photo %></div>
+<div class="details">
+ <h2><%= @user.name %></h2>
+  <p><%= link_to "Number of posts:", user_posts_url(@user.id) %> <%= @user.posts_counter %></p>
+</div>
+</article>
+<div class="bio">
+  <p>Bio</p>
+  <p><%= @user.bio %></p>
+</div>
+    <% @posts.each do |post| %>
+        <div class="post-details">
+      <h2>Post #<%= post.id %></h2>
+      <h3><%= post.text %></h3>
+      <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
+      </div>
+    <% end %>
+    <%= link_to user_posts_path(@user.id) do %>
+    <button type="button" class="see-posts">See all posts</button>
+    <% end %>
+</section>
