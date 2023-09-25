@@ -1,2 +1,27 @@
-<h1>A list of all posts of a given user</h1>
+<section class="container">
+<article class="users-article">
+<div class="photo"><%= @user.photo %></div>
+<div class="details">
+ <h2><%= @user.name %></h2>
+  <p>Number of posts: <%= @user.posts_counter %></p>
+</div>
+</article>
 
+<% @posts.each do |post| %>
+    <article class="post-comment">
+    <div class="posts-details">
+  <h2><%= link_to "Post ", user_post_url(@user.id, post.id) %> #<%= post.id %></h2>
+  <h3><%= post.text %></h3>
+  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
+  </div>
+
+  <div class="comment-cont">
+  <% post.comments.each do |comment| %>
+    <p><%= @user.name %>: <%= comment.text %> <%= comment.id %></p>
+    <% end %>
+  </div>
+  
+  </article>
+  <% end %>
+    <button type="button" class="pagination">Pagination</button>
+</section>
