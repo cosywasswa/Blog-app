@@ -16,7 +16,7 @@
   </div>
 
   <div class="comment-cont">
-  <% post.comments.each do |comment| %>
+  <% post.recent_comments.each do |comment| %>
     <p><%= @user.name %>: <%= comment.text %> <%= comment.id %></p>
     <% end %>
   </div>
