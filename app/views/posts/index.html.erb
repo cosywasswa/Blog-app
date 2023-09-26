@@ -12,7 +12,7 @@
     <div class="posts-details">
   <h2><%= link_to "Post ", user_post_url(@user.id, post.id) %> #<%= post.id %></h2>
   <h3><%= post.text %></h3>
-  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
+  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes.size %></p>
   </div>
 
   <div class="comment-cont">
@@ -23,5 +23,9 @@
   
   </article>
   <% end %>
+  <div class="new-post">
+  <p><%= link_to "Add Post", new_post_url %><p>
+  </div>
+
     <button type="button" class="pagination">Pagination</button>
 </section>
