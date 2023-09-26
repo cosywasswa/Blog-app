@@ -13,24 +13,24 @@ class PostsController < ApplicationController
   def new
     @user = current_user
     @post = Post.new
-end
+  end
 
-def create
-  @user = current_user
+  def create
+    @user = current_user
     @post = @user.posts.build(post_params)
 
-  if @post.save
-    redirect_to user_post_url(@user, @post)
+    if @post.save
+      redirect_to user_post_url(@user, @post)
 
-  else
-    flash.now[:error] = 'Oops, something went wrong'
-    redirect_to new_post_url
-end
-end
+    else
+      flash.now[:error] = 'Oops, something went wrong'
+      redirect_to new_post_url
+    end
+  end
 
-private
-def post_params
-  params.require(:post).permit(:title, :text)
-end
+  private
 
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
