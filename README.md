@@ -45,7 +45,6 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
 - **Create Database named Blog_app_development**
 - **Create tables by migration files**
 - **processing data in models**
@@ -53,6 +52,7 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 - **Setup controllers**
 - **Controllers specs**
 - **Users and posts views**
+- **Creating Forms**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,6 @@ it will install the required gemfile for running the project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- - Forms.
  - Integration specs for Views and fixing n+1 problems.
  - Add Devise.
  - Add authorization rules.
