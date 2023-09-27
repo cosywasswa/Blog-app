@@ -9,19 +9,19 @@
 
 <% @posts.each do |post| %>
     <article class="post-comment">
-    <div class="posts-details">
-  <h2><%= link_to "Post ", user_post_url(@user.id, post.id) %> #<%= post.id %></h2>
-  <h3><%= post.text %></h3>
-  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
-  </div>
+    <%= render partial: 'posts_details', locals: { post: post } %>
 
   <div class="comment-cont">
   <% post.recent_comments.each do |comment| %>
-    <p><%= @user.name %>: <%= comment.text %> <%= comment.id %></p>
+    <p><%= @user.name %>: <%= comment.text %></p>
     <% end %>
   </div>
   
   </article>
   <% end %>
+  <div class="new-post">
+  <p><%= link_to "Add Post", new_post_url %><p>
+  </div>
+
     <button type="button" class="pagination">Pagination</button>
 </section>

@@ -6,7 +6,7 @@
     <p>by <%= @user.name %></p>
  </div>
  <div>
-<span>Comments: <%= @post.comments_counter %> Likes:<%= @post.likes_counter %></span>
+<span>Comments: <%= @post.comments.size %> Likes:<%= @post.likes.size %></span>
 </div>
 </div>
 <div class="post-body">
@@ -16,8 +16,14 @@
 </article>
 <div class="comments-container">
 <% @post.comments.each do |comment| %>
-    <p><%= comment.user.name %>: <%= comment.text %> <%= comment.id %></P>
+    <p><%= comment.user.name %>: <%= comment.text %></P>
     <% end %>
+    <p class="add-p"><%= link_to "Add Comment", new_user_post_comment_path(user_id: @post.author_id, post_id: @post.id) %>
 </div>
 
+<div class="like">
+<%= form_with url: user_post_likes_path(@post.author, @post), method: :post do |form| %>
+  <%= form.submit "Like", class:"like-btn"%>
+<% end %>
+</div>
 </section>

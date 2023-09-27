@@ -1,0 +1,5 @@
+<div class="posts-details">
+<h2><%= link_to "Post ", user_post_url(@user.id, post.id) %> #<%= post.id %></h2>
+<h3><%= post.text %></h3>
+<p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes.size %></p>
+</div>
