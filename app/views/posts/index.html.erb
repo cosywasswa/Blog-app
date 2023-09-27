@@ -9,11 +9,7 @@
 
 <% @posts.each do |post| %>
     <article class="post-comment">
-    <div class="posts-details">
-  <h2><%= link_to "Post ", user_post_url(@user.id, post.id) %> #<%= post.id %></h2>
-  <h3><%= post.text %></h3>
-  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes.size %></p>
-  </div>
+    <%= render partial: 'posts_details', locals: { post: post } %>
 
   <div class="comment-cont">
   <% post.recent_comments.each do |comment| %>
