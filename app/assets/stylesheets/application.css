@@ -14,7 +14,6 @@ a {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding-top: 2rem;
 }
 
 .container {
@@ -31,6 +30,7 @@ a {
 .photo {
   width: 40%;
   border: 1px solid black;
+  background-color: beige;
 }
 
 .see-posts {
@@ -48,6 +48,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: beige;
 }
 
 .details p {
@@ -58,6 +59,7 @@ a {
   width: 80%;
   border: 1px solid black;
   padding: 10px;
+  background-color: rgb(212, 142, 51);
 }
 
 .bio p {
@@ -68,6 +70,7 @@ a {
   width: 80%;
   border: 1px solid black;
   padding: 10px;
+  background-color: bisque;
 }
 
 .post-details p {
@@ -107,6 +110,7 @@ a {
   width: 80%;
   border: 1px solid black;
   padding: 10px;
+  background-color: aquamarine;
 }
 
 .left {
@@ -126,6 +130,7 @@ a {
   width: 80%;
   border: 1px solid black;
   padding: 10px;
+  background-color: bisque;
 }
 
 .post-container {
