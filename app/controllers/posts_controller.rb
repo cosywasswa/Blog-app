@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
     else
       flash.now[:error] = 'Oops, something went wrong'
-      redirect_to new_post_url
+      redirect_to new_user_post_url
     end
   end
 
