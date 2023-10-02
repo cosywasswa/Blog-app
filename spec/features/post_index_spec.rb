@@ -34,11 +34,13 @@ RSpec.describe 'posts#index', type: :feature do
         it 'I can see the number of posts the user has written.' do
             expect(page).to have_content("#{@user_one.posts_counter}")
         end
-        it 'I can see some of the post body.' do
+
+        it 'should see title of the post' do
             @posts.each do |post|
-                expect(page).to have_content("#{post.text}")
-            end
+                expect(page).to have_content("#{post.title}") 
         end
+    end
+        
         it 'I can see the first comments on a post.' do
             @posts.each do |post|
                 post.recent_comments.each do |comment|

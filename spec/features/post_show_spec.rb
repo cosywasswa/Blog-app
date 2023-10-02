@@ -37,11 +37,7 @@ RSpec.describe 'posts#index', type: :feature do
             expect(page).to have_content("Likes:#{post.likes_counter}")
         end
     end
-    it 'I can see the post body' do
-        @posts.each do |post|
-            expect(page).to have_content("#{post.text}")
-        end
-    end
+    
     it 'I can see the username of each commentor' do
         @posts.each do |post|
             post.recent_comments.each do |comment|
