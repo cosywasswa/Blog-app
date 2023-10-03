@@ -30,7 +30,7 @@ RSpec.describe 'users#show page', type: :feature do
     before(:each) do
       visit user_path(@user1)
     end
-
+t
     it 'can see the user profile picture.' do
       expect(page).to have_css("img[src='#{@user1.photo}']")
     end
@@ -64,6 +64,11 @@ RSpec.describe 'users#show page', type: :feature do
       post = @user1.recent_posts.first
       click_link(post.id)
       expect(page).to have_current_path(user_post_path(@user1, post))
+    end
+
+    it 'When I click to see all posts, it redirects me to the user posts index page.' do
+      visit user_posts_path(@user1)
+      expect(page).to have_current_path(user_posts_path(@user1))
     end
   end
 end
