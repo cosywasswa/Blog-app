@@ -40,6 +40,12 @@ RSpec.describe 'posts#index', type: :feature do
                 expect(page).to have_content("#{post.title}") 
         end
     end
+
+    it 'should see body of the post' do
+        @posts.each do |post|
+            expect(page).to have_content("#{post.text}") 
+    end
+end
         
         it 'I can see the first comments on a post.' do
             @posts.each do |post|
@@ -57,6 +63,15 @@ RSpec.describe 'posts#index', type: :feature do
             @posts.each do |post|
                 expect(page).to have_content("Likes:#{post.likes_counter}")
             end
+        end
+    end
+describe 'GET show/page' do
+        it 'When I click on a post, I am redirected to that postshow page.' do
+            visit user_posts_url(user_id: @user_one.id)
+            post = @posts.first
+            click_link(post.id) 
+            expect(page).to have_current_path(user_post_path(@user_one.id, post.id) )
+        
         end
     end
 end
