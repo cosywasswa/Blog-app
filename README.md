@@ -53,6 +53,7 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 - **Controllers specs**
 - **Users and posts views**
 - **Creating Forms**
+- **Intergration specs and fix N+1**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,12 +107,17 @@ it will install the required gemfile for running the project
 - GitHub: [@cosywasswa](https://github.com/cosywasswa)
 - LinkedIn: [cosmas-wasswa](https://www.linkedin.com/in/cosmas-wasswa)
 
+👤 **Manzi Tresor**
+
+- GitHub: [@githubhandle](https://github.com/manzitresor)
+- Twitter: [@githubhandle](https://twitter.com/MANZITresor3)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/manzi-tresor-783b4022a/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- - Integration specs for Views and fixing n+1 problems.
  - Add Devise.
  - Add authorization rules.
  - Add API endpoints.

@@ -1,6 +1,6 @@
 <section class="container">
 <article class="users-article">
-<div class="photo"><%= @user.photo %></div>
+<div class="photo"><%=image_tag(@user.photo, :alt => "User profile photo.", :class => "display-photo") %></div>
 <div class="details">
  <h2><%= @user.name %></h2>
   <p><%= link_to "Number of posts:", user_posts_url(@user.id) %> <%= @user.posts_counter %></p>
@@ -12,7 +12,7 @@
 </div>
     <% @user.recent_posts.each do |post| %>
         <div class="post-details">
-      <h2><%= link_to "Post #", user_post_url(@user.id, post.id) %><%= post.id %></h2>
+        <h2><%= link_to "Post ##{post.id}", user_post_url(@user, post) %></h2>
       <h3><%= post.text %></h3>
       <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
       </div>

@@ -1,5 +1,5 @@
 <article class="users-article">
-<div class="photo"><%= user.photo %></div>
+<div class="photo"><%=image_tag(user.photo, :alt => "User profile photo.", :class => "display-photo") %></div>
 <div class="details">
  <h2><%= link_to user.name, user_url(user.id) %></h2>
   <p>Number of posts: <%= user.posts_counter %></p>
