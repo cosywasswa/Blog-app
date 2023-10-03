@@ -50,7 +50,6 @@ RSpec.describe 'posts#index', type: :feature do
       expect(page).to have_content(@post1.text.to_s)
     end
 
-
     it 'I can see the username of each commentor' do
       @post1.recent_comments.each do |comment|
         expect(page).to have_content(comment.user.name)
