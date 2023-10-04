@@ -229,11 +229,13 @@ a {
 .devise-head {
   text-align: center;
 }
+
 .field-dev {
   margin-block: 10px;
   width: 80%;
   font-size: 25px;
 }
+
 .dev-links {
   display: flex;
   flex-direction: column;
@@ -242,12 +244,14 @@ a {
   align-items: center;
   margin-top: 20px;
 }
+
 .actions-dev input[type="submit"] {
   font-size: 25px;
   background-color: brown;
   color: white;
   width: 20rem;
 }
+
 .field-dev input[type="text"],
 .field-dev input[type="email"],
 .field-dev input[type="password"],
