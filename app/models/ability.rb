@@ -2,9 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     if user.role == 'admin'
-    can :manage, :all  
+      can :manage, :all
     elsif user
       can :read, :all
       can :manage, Post, author_id: user.id

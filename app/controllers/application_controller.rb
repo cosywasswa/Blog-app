@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  rescue_from CanCan::AccessDenied do | exception |
+  rescue_from CanCan::AccessDenied do |exception|
     redirect_to users_url, alert: exception.message
   end
   # Set up user authentication
