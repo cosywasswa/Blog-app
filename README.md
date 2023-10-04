@@ -54,6 +54,7 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 - **Users and posts views**
 - **Creating Forms**
 - **Intergration specs and fix N+1**
+- **Add-devise**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +119,6 @@ it will install the required gemfile for running the project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- - Add Devise.
  - Add authorization rules.
  - Add API endpoints.
  - API documentation.
@@ -147,7 +147,7 @@ If you like this project you can share this project to your friend
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for this project
+We would like to thank Microverse for this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
