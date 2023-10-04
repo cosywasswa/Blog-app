@@ -1,6 +1,7 @@
 <div class="posts-details">
 <h2><%= link_to "Post ##{post.id}", user_post_url(@user.id, post.id) %></h2>
 <h3><%= post.title %></h3>
-<p><%= post.text %></p>
+<h3><%= post.text %></h3>
+<button class="delete-post-btn">Delete</button>
 <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes.size %></p>
 </div>
