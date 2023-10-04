@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     @post = @user.posts.build(post_params)
 
     if @post.save
+      @user.increment!(:posts_counter)
       redirect_to user_post_url(@user, @post)
 
     else
