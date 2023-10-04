@@ -8,6 +8,7 @@ class Ability
     elsif user
       can :read, :all
       can :manage, Post, author_id: user.id
+      can :manage, Comment, user_id: user.id
     end
   end
 end
