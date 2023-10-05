@@ -4,6 +4,10 @@ class PostsController < ApplicationController
   def index
     @user = User.includes(posts: :comments).find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    respond_to do |format|
+      format.html { render 'index' }
+      format.json { render json: @posts }
+    end
   end
 
   def show
@@ -29,20 +33,6 @@ class PostsController < ApplicationController
       redirect_to new_user_post_url
     end
   end
-
-  # def destroy
-  #   @user = User.find(params[:user_id])
-  #   @post = Post.find(params[:id])
-  #   authorize! :destroy, @post
-
-  #   if @post.destroy
-  #     flash[:success] = 'Post was successfully deleted.'
-  #   else
-  #     flash[:error] = 'Error deleting the post.'
-  #   end
-
-  #   redirect_to user_posts_path(@user)
-  # end
 
   def destroy
     post = Post.find(params[:id])
