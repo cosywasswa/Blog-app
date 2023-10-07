@@ -13,7 +13,7 @@ describe 'Comments API' do
     end
     post 'Create a new comment for a post' do
       tags 'Comments'
-      consumes 'application/json' 
+      consumes 'application/json'
       parameter name: :comment, in: :body, schema: {
         type: :object,
         properties: {
