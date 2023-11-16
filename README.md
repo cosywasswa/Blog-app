@@ -57,6 +57,7 @@ Blog-app is a fully functioning website that show the list of posts and empower 
 - **Add-devise**
 - **Add-authorization rules**
 - **Add-endpoint for posts and comments**
+- **API docummentation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,7 +122,6 @@ it will install the required gemfile for running the project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
- - API documentation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

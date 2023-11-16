@@ -1,0 +1,65 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/users/{user_id}/posts/{post_id}/comments":
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      description: User ID
+      schema:
+        type: integer
+    - name: post_id
+      in: path
+      required: true
+      description: Post ID
+      schema:
+        type: integer
+    get:
+      summary: Retrieve all comments of a post
+      tags:
+      - Comments
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a new comment for a post
+      tags:
+      - Comments
+      parameters: []
+      responses:
+        '201':
+          description: Created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+              required:
+              - text
+  "/users/{user_id}/posts":
+    parameters:
+    - name: user_id
+      in: path
+      required: true
+      description: User ID
+      schema:
+        type: integer
+    get:
+      summary: Retrieve all the posts of a user
+      tags:
+      - Posts
+      responses:
+        '200':
+          description: OK
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
